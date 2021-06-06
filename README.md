@@ -17,3 +17,7 @@ Run the script and press the <kbd>`</kbd> (tilde) key
 ## Why another flask macro?
 
 I don't like AHK and I don't trust macros made by others. Mine macro is small, without convoluted logic and exactly fits my needs.
+
+## Can I get banned?
+
+Yes, highly unlikely but still possible. Use at own risk.
