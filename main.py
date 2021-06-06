@@ -9,7 +9,10 @@ controller = keyboard.Controller()
 
 HOTKEY = "'`'"
 MIN_DELAY = 0
-MAX_DELAY = 150
+MAX_DELAY = 50
+
+MIN_PRESS_TIME = 50
+MAX_PRESS_TIME = 150
 
 # TODO: load from file
 FLASK_DURATIONS = {
@@ -27,6 +30,8 @@ def use_flask(key: str):
     if ends_at < datetime.now():
         sleep(random.randint(MIN_DELAY, MAX_DELAY) / 1000)
         controller.press(key)
+        sleep(random.randint(MIN_PRESS_TIME, MAX_PRESS_TIME) / 1000)
+        controller.release(key)
         TIMEOUT_CACHE[key] = datetime.now()
 
 
